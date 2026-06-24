@@ -1,0 +1,20 @@
+//Local Storage:
+local storage e data gulo key: value pair akare thake.
+✅ Data stays after browser closes
+✅ Easy to use (key-value pairs)
+✅ Good for theme, language, preferences
+
+
+//localStorage.setItem("location","USA")
+//localStorage.getItem(location)
+//localStorage.removeItem(location)
+
+
+//Summary:
+Method                What it does 
+setItem(key, value)   Save data
+getItem(key)          Read data
+removeItem(key)       Delete one item
+clear()               Delete all items
+JSON.stringify()      Convert object → string before saving
+JSON.parse()          Convert string → object after reading.
