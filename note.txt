@@ -18,3 +18,35 @@ removeItem(key)       Delete one item
 clear()               Delete all items
 JSON.stringify()      Convert object → string before saving
 JSON.parse()          Convert string → object after reading.
+
+--------------------------------------------------------------
+//Local Storage vs session Storage:
+Local Storage stores data permanently (until it's explicitly removed) and is shared across tabs for the same origin. Session Storage stores data only for the lifetime of a single browser tab; once that tab is closed, the data is automatically cleared. Both store data as key-value pairs using the Web Storage API.
+
+localStorage    → permanent, shared across tabs, ~5MB
+sessionStorage  → temporary, per tab, ~5MB
+Both            → strings only, same methods, browser only
+Never           → store passwords or sensitive data
+
+//
+localStorage    → permanent storage   → survives tab & browser close
+sessionStorage  → temporary storage   → dies when tab closes
+
+Both:
+  → store strings only (use JSON for objects)
+  → ~5MB storage
+  → same methods (setItem, getItem, removeItem, clear)
+  → browser only (not Node.js)
+
+
+  localStorage ✅ use for:
+  → Dark/light theme preference
+  → Language setting
+  → Remember username
+  → App settings
+
+sessionStorage ✅ use for:
+  → One-time form data
+  → Temporary login token
+  → Single session shopping cart
+  → Data you don't want to persist
